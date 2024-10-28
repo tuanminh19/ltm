@@ -1,15 +1,15 @@
 import cv2
 import os
 
-# Địa chỉ IP của camera từ điện thoại
-url = 'http://192.168.100.31:4747/video'  # Địa chỉ IP từ ứng dụng IP Webcam
+# Địa chỉ IP của camera 
+#url = 'http://192.168.100.31:4747/video'  # Địa chỉ IP từ ứng dụng IP Webcam
 
 # Mở kết nối video
 cap = cv2.VideoCapture(url)
 
 # Kiểm tra xem camera có mở thành công không
 if not cap.isOpened():
-    print("Không thể kết nối với camera trên điện thoại!")
+    print("Không thể kết nối với camera !")
     exit()
 
 # Tìm số thứ tự của file tiếp theo (photo1.jpg, photo2.jpg,...)
@@ -23,7 +23,7 @@ while True:
 
     # Kiểm tra xem có đọc được khung hình không
     if not ret:
-        print("Không thể đọc khung hình từ camera trên điện thoại!")
+        print("Không thể đọc khung hình từ camera !")
         break
 
     # Hiển thị khung hình
